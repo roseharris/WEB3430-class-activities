@@ -1,17 +1,28 @@
-import React from 'react'
+import React from "react";
+import { FaThumbsUp } from "react-icons/fa";
+import StarRating from "./StarRating";
 
-export function Movie(props){
-    const m = props.movie
-    return (
-      <div className="card">
-        <img src={m.poster} alt={m.title}/>
-        <h2>{m.title}</h2>
-        <p>{m.plot}</p>
-        <ul className="extra">
-          <li><strong>{m.rating}</strong> rating</li>
-          <li><strong>{m.votes}</strong> votes</li>
-          <li><button className="primary">Select</button></li>
-        </ul>
-      </div>
-    )
-  }
+export default function Movie(props) {
+  const onLike = props.onLike;
+  const m = props.movie;
+  return (
+    <div className="card">
+      <img src={m.poster} alt={m.title} />
+      <h2>{m.title}</h2>
+      <p>{m.plot}</p>
+      <ul className="extra">
+        <li>
+          <StarRating/>
+          <strong>{m.rating}</strong> rating
+        </li>
+        <li>
+          <strong>{m.votes}</strong> votes
+        </li>
+        <li>
+          <FaThumbsUp color="maroon" onClick={onLike}/>
+            <small>{m.likes ? m.likes : 0}</small>
+        </li>
+      </ul>
+    </div>
+  );
+}
