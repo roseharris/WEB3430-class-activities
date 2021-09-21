@@ -12,7 +12,7 @@ export default function Movie(props) {
       <p>{m.plot}</p>
       <ul className="extra">
         <li>
-          <StarRating/>
+          <StarRating rating={m.rating}/>
           <strong>{m.rating}</strong> rating
         </li>
         <li>
