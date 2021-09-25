@@ -14,7 +14,7 @@ export default function StarRating(props) { //destructuring
         {createArray(5).map((n, i) => ( //create the star array using map function
           <Star
             key={i}
-            selected ={i < Math.floor(rating / 2) - 1} //Am I creating the star array correctly?
+            selected ={i <= Math.floor(rating / 2) - 1}  //Am I creating the star array correctly?
           />
         ))}
       </>
