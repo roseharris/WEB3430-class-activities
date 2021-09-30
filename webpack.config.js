@@ -18,6 +18,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'javascripts/[name].js',
+    publicPath: '/'
     // clean: true // Webpack 5
   },
   module: {
