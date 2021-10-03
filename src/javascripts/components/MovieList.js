@@ -33,7 +33,7 @@ export default function MovieList() {
       </nav>
       <main>
         <Switch>
-          <Route exact  path="/movies">
+          <Route exact path="/movies">
             {movies.map((m, i) => {
               return (
                 <Movie
