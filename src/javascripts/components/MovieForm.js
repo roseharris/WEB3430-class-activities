@@ -18,8 +18,8 @@ const validationSchema = yup.object({
     genre: yup.string().required(),
     plot: yup.string().required(),
     poster: yup.string().url().required(),
-    rating: yup.number().required(),
-    votes: yup.number().required().min(1),
+    rating: yup.number().required().min(0).max(10),
+    votes: yup.number().required().min(0),
     imdbID: yup.string().required(),
     reviews: yup.string()
 })
