@@ -29,7 +29,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "date-fns": "^2.24.0",
+    "date-fns": "^2.25.0",
     "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-datepicker": "^4.2.1",
